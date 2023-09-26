@@ -57,7 +57,7 @@ public class ArrayListTest {
 		// Arraylist -> toArray
 		System.out.println("=====================================");
 		Object[] obj = strList.toArray(); // toArray()메소드 String으로 받으면 컴파일 에러발생
-		for(Object data: obj) {
+		for(Object data: obj) { 
 			System.out.print(data.toString() + " ");
 		}
 		System.out.println();
