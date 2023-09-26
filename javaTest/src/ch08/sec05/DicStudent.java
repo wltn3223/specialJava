@@ -33,12 +33,12 @@ public class DicStudent {
 		map.forEach((name,stuInfo) -> System.out.println("학생이름:" + name + stuInfo));
 		
 		System.out.println("==============Search==================");
-		
+	
 		//학생 입력
 		while(true) {
 			System.out.print("검색할이름?");
 			String name = scan.nextLine().trim();
-			if("exit".equals(name)) break;
+			if("exit".equalsIgnoreCase(name)) break;
 			Student student = map.get(name);
 			System.out.println(name + "은" + (student != null?
 			"id: " + student.id + "tel: " + student.tel: "없는사람입니다."));
