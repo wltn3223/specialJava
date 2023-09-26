@@ -14,6 +14,8 @@ public class HashMapTest {
 		dic.put("baby", "아기");
 		dic.put("love", "사랑");
 		dic.put("apple", "사과");
+		// 중복된 key값을 넣을때 이전의 value를 덮어쓰게된다.
+		dic.put("apple", "사과2");
 		
 		// HashMap 출력
 		
@@ -21,10 +23,11 @@ public class HashMapTest {
 			System.out.println(key + ": " + dic.get(key));
 		}
 		System.out.println();
+		System.out.println("==============forEach=================");
 		
 		// for each문으로 출력
 		dic.forEach((key,value) -> System.out.println(key +": " + value));
-		System.out.println("==============================================");
+		System.out.println("=======================================");
 		
 		//검색기능
 		while(true) {
