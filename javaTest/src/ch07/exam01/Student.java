@@ -65,20 +65,19 @@ public class Student {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(gradeAvg, major, name, schoolNum);
+		return Objects.hash(name, schoolNum);
 	}
 
 
 	@Override
 	public boolean equals(Object obj) {
-		Student student = new Student();
-		if(obj instanceof Student) {
-			student = (Student)obj;
+		Student student = null;
+		if(!(obj instanceof Student)) {
+			return false;
 		}
-		else return false;
+		student = (Student)obj;
 		
-		return (this.gradeAvg == student.gradeAvg && this.major.equals(student.major) && this.name.equals(student.name)
-				&& this.schoolNum == student.schoolNum);
+		return (this.name.equals(student.name) && this.schoolNum == student.schoolNum);
 	}
 
 
